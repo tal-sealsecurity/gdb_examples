@@ -19,3 +19,4 @@ delete: removes breakpoints or watchpoints
 layout: changes GDB's display layout (src, asm, split, etc.)
 target record-full: enables reverse debugging (record execution)
 reverse next: steps backward to previous line
+ref: refreshes the display
