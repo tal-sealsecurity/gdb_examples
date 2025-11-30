@@ -10,11 +10,8 @@ Examples for gdb
 
 # setup 
 ```sh
-docker run \
-    -it \
-    -v "${PWD}":/workdir -w /workdir \
-    --cap-add=SYS_PTRACE --security-opt seccomp=unconfined \
-    debian:13 bash
+docker build -t gdb_container .
+docker run -it --cap-add=SYS_PTRACE --security-opt seccomp=unconfined gdb_container bash
 ```
 explanation:
 - SYS_PTRACE is a Linux capability that allows a process to trace other processes using system calls like ptrace()
